@@ -10,20 +10,17 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 BUFFER_SIZE = int(1e5)  # replay buffer size
-#BUFFER_SIZE = int(1e6)  # replay buffer size
 BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR_ACTOR = 2e-4         # learning rate of the actor 
 LR_CRITIC = 3e-4        # learning rate of the critic
-#LR_CRITIC = 3e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
-#WEIGHT_DECAY = 0.0001        # L2 weight decay
-NUM_AGENTS = 20 # number of agents
-UPDATE_RATE = 20 # how many time steps between updates
-NUM_UPDATES = 10 # how many times train the agens on each update
-EPSILON = .5             # starting point for noise decline
-EPSILON_DECAY = 0.01 # noise decay for each episode
+NUM_AGENTS = 20         # number of agents
+UPDATE_RATE = 20        # number of time steps between updates
+NUM_UPDATES = 10        # how many times train the agens on each update
+EPSILON = .5            # initial noise magnitude
+EPSILON_DECAY = 0.01    # noise decay per episode
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
