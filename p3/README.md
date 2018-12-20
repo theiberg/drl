@@ -6,7 +6,7 @@
 
 # Project 3: Collaboration and Competition
 
-This folder contains a solution for Project 3 in "Deep Reinforcement Learning at Udacity.
+This folder contains a solution for Project 3 in "Deep Reinforcement Learning" at Udacity.
 
 ### Introduction
 
